@@ -1,0 +1,11 @@
+nav {
+  z-index: 1;
+  position: fixed;
+  display: inline;
+  font-family: 'Bungee', cursive, sans-serif;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+}
