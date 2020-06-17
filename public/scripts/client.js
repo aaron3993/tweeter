@@ -3,8 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
-const createTweetElement = tweet => {
+const createTweetElement = (tweet) => {
   let $tweet = $(`<article class="tweet">
   <header>
     <div class="profile-display">
@@ -13,7 +18,7 @@ const createTweetElement = tweet => {
     </div>
     <div class="profile">${tweet.user.handle}</div>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
     <p>${tweet.created_at}</p>
     <div class="logos">
@@ -22,41 +27,55 @@ const createTweetElement = tweet => {
       <i class="fa fa-heart"></i>
     </div>
   </footer>
-</article>`)
-return $tweet
-}
+</article>`);
+  return $tweet;
+};
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (let tweet of tweets) {
-    console.log(createTweetElement(tweet))
-    $('.tweets').append(createTweetElement(tweet))
+    $(".tweets").prepend(createTweetElement(tweet));
+    console.log(createTweetElement(tweet));
   }
-}
+};
 
-$(document).ready(function() {
-  $('#add-tweet').on('submit', function(event) {
-    console.log('test')
-    event.preventDefault()
-    $.ajax({
-      url: '/tweets',
-      data: $(this).serialize(),
-      method: 'POST'})
-      // or .then
-    .done(response => {
-      console.log('response')
-    })
-  })
-  const loadTweets = function() {
-    $('#add-tweet').on('submit', function () {
-      console.log('Button clicked, performing ajax call...');
-      $.ajax('/tweets', { method: 'GET' })
-      .then(function(tweets) {
-        console.log('Success: ', tweets);
-        renderTweets(tweets)
-        console.log($('#text-tweet'.value).length)
+const validation = () => {
+  const tweetValue = $("#tweet-text").val();
+  if (tweetValue === "" || tweetValue === null) {
+    // $("#error").slideDown();
+    $("#error").text("The input is empty")
+    return false;
+  } else if (tweetValue.length > 140) {
+    $("#error").text("You have exceed the maximum character count")
+    return false;
+  }
+  return true;
+};
+
+const loadTweets = () => {
+  console.log("Button clicked, performing ajax call...");
+  $.ajax({
+    url: "/tweets",
+    method: "GET",
+    dataType: "JSON",
+  }).then(function (tweets) {
+    console.log("Success: ", tweets);
+    renderTweets(tweets);
+  });
+};
+
+$(document).ready(function () {
+  $("#add-tweet").on("submit", function (event) {
+    event.preventDefault();
+    if (validation()) {
+      $.ajax({
+        url: "/tweets",
+        data: $(this).serialize(),
+        method: "POST",
+      }).then((response) => {
+        console.log("response");
+        loadTweets();
       });
-    });
-  };
-  // if ('#text-tweet'.value)
-  loadTweets()
-})
+    }
+  });
+  loadTweets();
+});
