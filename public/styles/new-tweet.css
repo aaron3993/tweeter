@@ -25,6 +25,10 @@
 }
 
 #tweet-text {
+  height: 2em;
+  border: none;
+  resize: none;
+  font-weight: bold;
   background-color: inherit;
 }
 

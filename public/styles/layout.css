@@ -41,5 +41,10 @@ main {
   .display {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  main {
+    margin-top: 120px;
   }
 }
