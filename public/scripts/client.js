@@ -79,21 +79,7 @@ const postTweets = () => {
   });
 }
 
-const toggleForm = () => {
-  let show = true
-  $(".toggle-button").click(function() {
-    if (show) {
-      $(".form-hidden").slideDown();
-      show = false
-    } else {
-      $(".form-hidden").slideUp();
-      show = true
-    }
-  })
-}
-
 $(document).ready(function () {
-  toggleForm();
   postTweets();
   loadTweets();
 });
