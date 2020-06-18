@@ -63,20 +63,7 @@ const loadTweets = () => {
   });
 };
 
-$(document).ready(function () {
-  // Toggle form
-  let show = true
-  $(".toggle-button").click(function() {
-    if (show) {
-      $(".form-hidden").slideDown();
-      show = false
-    } else {
-      $(".form-hidden").slideUp();
-      show = true
-    }
-  })
-
-  // POST tweets to server
+const postTweets = () => {
   $("#add-tweet").on("submit", function (event) {
     event.preventDefault();
       if (validation()) {
@@ -90,5 +77,23 @@ $(document).ready(function () {
       });
     }
   });
+}
+
+const toggleForm = () => {
+  let show = true
+  $(".toggle-button").click(function() {
+    if (show) {
+      $(".form-hidden").slideDown();
+      show = false
+    } else {
+      $(".form-hidden").slideUp();
+      show = true
+    }
+  })
+}
+
+$(document).ready(function () {
+  toggleForm();
+  postTweets();
   loadTweets();
 });
