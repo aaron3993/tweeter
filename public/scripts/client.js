@@ -65,9 +65,15 @@ const loadTweets = () => {
 
 $(document).ready(function () {
   // Toggle form
+  let show = true
   $(".toggle-button").click(function() {
-    // alert('hi')
-    $(".form-hidden").slideDown();
+    if (show) {
+      $(".form-hidden").slideDown();
+      show = false
+    } else {
+      $(".form-hidden").slideUp();
+      show = true
+    }
   })
 
   // POST tweets to server

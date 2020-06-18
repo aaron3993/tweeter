@@ -40,34 +40,39 @@
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <header class="page-header"
-      <div>
+    <div class="display">
+      <header class="page-header">
+        <div>
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </header>
-    <main class="container">
-      <div class="form-hidden">
-      <section class="new-tweet">
-        <div id="error">
-          <i class="fa fa-exclamation-triangle"></i><span id="error-message">Error</span><i class="fa fa-exclamation-triangle"></i>
         </div>
-        <h2>Compose Tweet</h2>
-        <form id="add-tweet" method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <footer>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </footer>
-        </form>
-      </section>
+        <br>
+        <div>
+          <h2>Your Name</h2>
+        </div>
+      </header>
+      <main class="container">
+        <div class="form-hidden">
+          <section class="new-tweet">
+            <div id="error">
+              <i class="fa fa-exclamation-triangle"></i><span id="error-message">Error</span><i class="fa fa-exclamation-triangle"></i>
+            </div>
+            <h2>Compose Tweet</h2>
+            <form id="add-tweet" method="POST" action="/tweets">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+              <footer>
+                <button type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </footer>
+            </form>
+          </section>
+        </div>
+        <section class="tweets">
+        </section>
+      </main>
+      <div id="scroll-up">
+        <i class="fa fa-chevron-circle-up"></i>
       </div>
-      <section class="tweets">
-      </section>
-    </main>
+    </div>
   </body>
 </html>

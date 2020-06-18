@@ -3,9 +3,9 @@
   height: 400px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #cc8800;
   background-image: url(http://www.transparenttextures.com/patterns/project-paper.png);
 }
