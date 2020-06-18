@@ -20,7 +20,7 @@ const createTweetElement = (tweet) => {
   </header>
   <p>${escape(tweet.content.text)}</p>
   <footer>
-    <p>${tweet.created_at}</p>
+    <p>${moment(tweet.created_at, "").fromNow()}</p>
     <div class="logos">
       <i class="fa fa-flag"></i>
       <i class="fa fa-retweet"></i>
@@ -41,38 +41,38 @@ const renderTweets = function (tweets) {
 const validation = () => {
   const tweetValue = $("#tweet-text").val();
   if (tweetValue === "" || tweetValue === null) {
-    // $("#error").slideDown();
-    $("#error").text("The input is empty")
+    $("#error-message").text("The input is empty")
+    $("#error").slideDown();
     return false;
   } else if (tweetValue.length > 140) {
-    $("#error").text("You have exceed the maximum character count")
+    $("#error").slideDown();
+    $("#error-message").text("You have exceed the maximum character count")
     return false;
   }
   return true;
 };
 
 const loadTweets = () => {
-  console.log("Button clicked, performing ajax call...");
   $.ajax({
     url: "/tweets",
     method: "GET",
     dataType: "JSON",
-  }).then(function (tweets) {
-    console.log("Success: ", tweets);
-    renderTweets(tweets);
+  }).then(function(response) {
+    $(".tweets").empty()
+    renderTweets(response);
   });
 };
 
 $(document).ready(function () {
   $("#add-tweet").on("submit", function (event) {
     event.preventDefault();
-    if (validation()) {
+      if (validation()) {
+        $("#error").slideUp();
       $.ajax({
         url: "/tweets",
         data: $(this).serialize(),
         method: "POST",
       }).then((response) => {
-        console.log("response");
         loadTweets();
       });
     }

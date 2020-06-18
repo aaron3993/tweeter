@@ -4,9 +4,18 @@
 }
 
 #error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border: solid red 5px;
-  padding: 15px;
+  padding: 0 20px;
   color: red;
+  display: none;
+}
+
+#error-message {
+  margin: 10px;
 }
 
 .new-tweet form {

@@ -19,8 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,700&display=swap" rel="stylesheet">
 
     <!-- External JS -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <!-- <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script> -->
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -45,7 +46,11 @@
     </header>
     <main class="container">
       <section class="new-tweet">
-        <p id="error">Error</p>
+        <div id="error">
+          <i class="fa fa-exclamation-triangle"></i>
+          <p id="error-message">Error</p>
+          <i class="fa fa-exclamation-triangle"></i>
+        </div>
         <h2>Compose Tweet</h2>
         <form id="add-tweet" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
