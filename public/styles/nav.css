@@ -23,6 +23,10 @@ nav {
   margin: auto;
 }
 
+.toggle-button {
+  color: red;
+}
+
 .toggle-button:hover {
   font-size: 150%;
 }

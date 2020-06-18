@@ -1,3 +1,7 @@
+.form-hidden {
+  display: none;
+}
+
 .new-tweet {
   font-weight: bold;
   padding: 20px;
