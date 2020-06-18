@@ -64,6 +64,12 @@ const loadTweets = () => {
 };
 
 $(document).ready(function () {
+  // Toggle form
+  $(".toggle-button").on('click', function(event) {
+    $(".new-tweet").slideDown();
+  })
+
+  // POST tweets to server
   $("#add-tweet").on("submit", function (event) {
     event.preventDefault();
       if (validation()) {

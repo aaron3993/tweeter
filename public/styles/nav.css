@@ -13,11 +13,16 @@ nav {
 }
 
 .toggle-form {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.toggle-form p {
+  margin: auto;
+}
+
 .toggle-button:hover {
-  font-size: 200%;
+  font-size: 150%;
 }
