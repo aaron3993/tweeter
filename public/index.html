@@ -31,7 +31,11 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <h1>tweeter</h1>
+      <div class="toggle-form">
+        <p>Write a new tweet</p>
+        <i class="toggle-button fa fa-angle-double-down"></i>
+      </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -47,9 +51,7 @@
     <main class="container">
       <section class="new-tweet">
         <div id="error">
-          <i class="fa fa-exclamation-triangle"></i>
-          <p id="error-message">Error</p>
-          <i class="fa fa-exclamation-triangle"></i>
+          <i class="fa fa-exclamation-triangle"></i><span id="error-message">Error</span><i class="fa fa-exclamation-triangle"></i>
         </div>
         <h2>Compose Tweet</h2>
         <form id="add-tweet" method="POST" action="/tweets">
