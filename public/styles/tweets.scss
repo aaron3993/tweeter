@@ -19,7 +19,7 @@ $profile-bg-color: #bdbcb9;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   p { word-wrap: break-word; }
 
   footer {
@@ -34,9 +34,7 @@ $profile-bg-color: #bdbcb9;
     box-shadow: 0.5em 0.5em 0.5em $box-shadow-color;
     opacity: 1;
 
-    .profile{
-      visibility: visible;
-    }
+    .profile { visibility: visible; }
   }
 }
 

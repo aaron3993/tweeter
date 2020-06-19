@@ -10,10 +10,8 @@ $header-bg-color: #cc8800;
   justify-content: center;
   background-color: $header-bg-color;
   background-image: url(http://www.transparenttextures.com/patterns/project-paper.png);
-}
 
-.page-header img {
-  padding-top: 2em;
+  img { padding-top: 2em; }
 }
 
 @media only screen and (min-width: 1024px) {

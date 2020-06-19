@@ -29,16 +29,8 @@ $tweet-button-font-color: white;
   }
 }
 
-#error {
-  text-align: center;
-  border: solid $error-color 5px;
-  padding: 1em;
+.red {
   color: $error-color;
-  display: none;
-}
-
-#error-message {
-  margin: 0.5em;
 }
 
 #tweet-text {
@@ -49,6 +41,14 @@ $tweet-button-font-color: white;
   background-color: inherit;
 }
 
-.red {
+#error {
+  text-align: center;
+  border: solid $error-color 5px;
+  padding: 1em;
   color: $error-color;
+  display: none;
+}
+
+#error-message {
+  margin: 0.5em;
 }
