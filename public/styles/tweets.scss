@@ -6,18 +6,23 @@ $profile-bg-color: #bdbcb9;
 }
 
 .tweet {
-  margin: 20px;
+  width: 100%;
+  margin: 1.5em;
   border: 5px solid;
-  padding: 0 20px;
+  padding: 0 1.5em;
   opacity: 0.7;
 }
 
 .tweet header {
-  margin-top: 10px;
+  margin-top: 0.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.tweet p {
+  word-wrap: break-word;
 }
 
 .profile-display {
@@ -27,13 +32,13 @@ $profile-bg-color: #bdbcb9;
 }
 
 .profile-display img {
-  margin-right: 20px;
+  margin-right: 1.5em;
 }
 
 .profile {
   color: $profile-bg-color;
   visibility: hidden;
-  margin-right: 20px;
+  margin-right: 1.5em;
 }
 
 .tweet footer {
@@ -45,11 +50,11 @@ $profile-bg-color: #bdbcb9;
 }
 
 .logos i {
-  margin: 10px;
+  margin: 0.3em;
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 10px 10px $box-shadow-color;
+  box-shadow: 0.5em 0.5em 0.5em $box-shadow-color;
   opacity: 1;
 }
 

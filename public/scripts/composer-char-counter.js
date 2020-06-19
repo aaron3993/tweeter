@@ -20,7 +20,6 @@ const toggleForm = () => {
 const scroll = function() {
   $(window).on('scroll', function() {
     scrollPosition = $(this).scrollTop();
-    console.log(scrollPosition)
     if (scrollPosition > 0) {
       $('#scroll-up').fadeIn()
       $('.toggle-button').animate({opacity: 0}, 0)

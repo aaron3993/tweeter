@@ -4,19 +4,19 @@
 
 .new-tweet {
   font-weight: bold;
-  padding: 20px;
+  padding: 1.5em;
 }
 
 #error {
   text-align: center;
   border: solid red 5px;
-  padding: 20px;
+  padding: 1em;
   color: red;
   display: none;
 }
 
 #error-message {
-  margin: 10px;
+  margin: 0.5em;
 }
 
 .new-tweet form {
@@ -44,7 +44,7 @@
 
 .new-tweet footer {
   border-top: 5px solid;
-  padding-top: 15px;
+  padding-top: 1em;
   display: flex;
   justify-content: space-between;
 }

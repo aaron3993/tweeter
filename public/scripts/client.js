@@ -5,24 +5,28 @@ const escape = function (str) {
 };
 
 const createTweetElement = (tweet) => {
-  let $tweet = $(`<article class="tweet">
-  <header>
-    <div class="profile-display">
-      <img src=${tweet.user.avatars}>
-      <h4>${tweet.user.name}</h4>
-    </div>
-    <div class="profile">${tweet.user.handle}</div>
-  </header>
-  <p>${escape(tweet.content.text)}</p>
-  <footer>
-    <p>${moment(tweet.created_at, "").fromNow()}</p>
-    <div class="logos">
-      <i class="fa fa-flag"></i>
-      <i class="fa fa-retweet"></i>
-      <i class="fa fa-heart"></i>
-    </div>
-  </footer>
-</article>`);
+  let $tweet = $(`
+  <article class="tweet">
+    <header>
+      <div class="profile-display">
+        <img src=${tweet.user.avatars}>
+        <h4>${tweet.user.name}</h4>
+      </div>
+      <div class="profile">
+        ${tweet.user.handle}
+      </div>
+    </header>
+    <p>${escape(tweet.content.text)}</p>
+    <footer>
+      <p>${moment(tweet.created_at, "").fromNow()}</p>
+      <div class="logos">
+        <i class="fa fa-flag"></i>
+        <i class="fa fa-retweet"></i>
+        <i class="fa fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+  `);
   return $tweet;
 };
 
@@ -36,7 +40,7 @@ const renderTweets = function (tweets) {
 const validation = () => {
   const tweetValue = $("#tweet-text").val();
   if (tweetValue === "" || tweetValue === null) {
-    $("#error-message").text("The input is empty, please enter some text!")
+    $("#error-message").text("The input is empty!")
     $("#error").slideDown();
     return false;
   } else if (tweetValue.length > 140) {
