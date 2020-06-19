@@ -15,3 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+!["Screenshot of desktop view with an empty input"](https://github.com/aaron3993/tweeter/blob/master/docs/desktop-empty.png?raw=true)
+!["Screenshot of mobile view while hovering a tweet"](https://github.com/aaron3993/tweeter/blob/master/docs/mobile-hover-tweet.png?raw=true)
