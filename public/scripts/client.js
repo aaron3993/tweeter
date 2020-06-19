@@ -1,4 +1,4 @@
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -30,7 +30,7 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     $(".tweets").prepend(createTweetElement(tweet));
     console.log(createTweetElement(tweet));
@@ -40,12 +40,12 @@ const renderTweets = function (tweets) {
 const validation = () => {
   const tweetValue = $("#tweet-text").val();
   if (tweetValue === "" || tweetValue === null) {
-    $("#error-message").text("The input is empty!")
+    $("#error-message").text("The input is empty!");
     $("#error").slideDown();
     return false;
   } else if (tweetValue.length > 140) {
     $("#error").slideDown();
-    $("#error-message").text("You have exceed the maximum character count")
+    $("#error-message").text("You have exceed the maximum character count");
     return false;
   }
   return true;
@@ -57,16 +57,16 @@ const loadTweets = () => {
     method: "GET",
     dataType: "JSON",
   }).then(function(response) {
-    $(".tweets").empty()
+    $(".tweets").empty();
     renderTweets(response);
   });
 };
 
 const postTweets = () => {
-  $("#add-tweet").on("submit", function (event) {
+  $("#add-tweet").on("submit", function(event) {
     event.preventDefault();
-      if (validation()) {
-        $("#error").slideUp();
+    if (validation()) {
+      $("#error").slideUp();
       $.ajax({
         url: "/tweets",
         data: $(this).serialize(),
@@ -76,9 +76,9 @@ const postTweets = () => {
       });
     }
   });
-}
+};
 
-$(document).ready(function () {
+$(document).ready(function() {
   postTweets();
   loadTweets();
 });

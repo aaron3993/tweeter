@@ -9,7 +9,6 @@
   padding: 0 1.5em;
   opacity: 0.7;
 }
-
 .tweet header {
   margin-top: 0.5em;
   display: flex;
@@ -17,9 +16,22 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .tweet p {
   word-wrap: break-word;
+}
+.tweet footer {
+  border-top: 5px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet:hover {
+  box-shadow: 0.5em 0.5em 0.5em gray;
+  opacity: 1;
+}
+.tweet:hover .profile {
+  visibility: visible;
 }
 
 .profile-display {
@@ -27,7 +39,6 @@
   flex-direction: row;
   align-items: center;
 }
-
 .profile-display img {
   margin-right: 1.5em;
 }
@@ -38,25 +49,8 @@
   margin-right: 1.5em;
 }
 
-.tweet footer {
-  border-top: 5px solid;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .logos i {
   margin: 0.3em;
-}
-
-.tweet:hover {
-  box-shadow: 0.5em 0.5em 0.5em gray;
-  opacity: 1;
-}
-
-.tweet:hover .profile {
-  visibility: visible;
 }
 
 /*# sourceMappingURL=tweets.css.map */

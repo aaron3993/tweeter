@@ -9,6 +9,24 @@ $tweet-button-font-color: white;
 .new-tweet {
   font-weight: bold;
   padding: 1.5em;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    color: $tweet-button-font-color;
+    background-color: $tweet-button-color;
+    font-weight: bold;
+  }
+
+  footer {
+    border-top: 5px solid;
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #error {
@@ -23,11 +41,6 @@ $tweet-button-font-color: white;
   margin: 0.5em;
 }
 
-.new-tweet form {
-  display: flex;
-  flex-direction: column;
-}
-
 #tweet-text {
   line-height: 2rem;
   border: none;
@@ -36,19 +49,6 @@ $tweet-button-font-color: white;
   background-color: inherit;
 }
 
-.new-tweet button {
-  color: $tweet-button-font-color;
-  background-color: $tweet-button-color;
-  font-weight: bold;
-}
-
 .red {
   color: $error-color;
-}
-
-.new-tweet footer {
-  border-top: 5px solid;
-  padding-top: 1em;
-  display: flex;
-  justify-content: space-between;
 }
