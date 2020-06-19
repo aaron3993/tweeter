@@ -1,3 +1,6 @@
+$box-shadow-color: gray;
+$profile-bg-color: #bdbcb9;
+
 .tweets {
   width: 100%;
 }
@@ -28,7 +31,7 @@
 }
 
 .profile {
-  color: #bdbcb9;
+  color: $profile-bg-color;
   visibility: hidden;
   margin-right: 20px;
 }
@@ -46,12 +49,10 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px 10px $box-shadow-color;
   opacity: 1;
 }
 
-.tweet:hover .profile {
+.tweet:hover .profile{
   visibility: visible;
 }
-
-/*# sourceMappingURL=tweets.css.map */

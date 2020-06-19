@@ -1,7 +1,11 @@
+$body-bg-color: #f4f1ec;
+$body-font-color:  #545149;
+$body-font-stack: 'Source Sans Pro', sans-serif;
+$scroll-up-color: red;
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
   /* border: 1px solid black; */
@@ -10,11 +14,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $body-font-color;
+  background-color: $body-bg-color;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $body-font-stack;
 }
 
 .display {
@@ -28,7 +33,7 @@ main {
 }
 
 #scroll-up {
-  color: red;
+  color: $scroll-up-color;
   display: none;
   position: fixed;
   bottom: 10px;
@@ -52,5 +57,3 @@ main {
     margin-right: 1.7em;
   }
 }
-
-/*# sourceMappingURL=layout.css.map */

@@ -1,3 +1,7 @@
+$error-color: red;
+$tweet-button-color: #324ca8;
+$tweet-button-font-color: white;
+
 .form-hidden {
   display: none;
 }
@@ -9,9 +13,9 @@
 
 #error {
   text-align: center;
-  border: solid red 5px;
+  border: solid $error-color 5px;
   padding: 20px;
-  color: red;
+  color: $error-color;
   display: none;
 }
 
@@ -33,13 +37,13 @@
 }
 
 .new-tweet button {
-  color: white;
-  background-color: #324ca8;
+  color: $tweet-button-font-color;
+  background-color: $tweet-button-color;
   font-weight: bold;
 }
 
 .red {
-  color: red;
+  color: $error-color
 }
 
 .new-tweet footer {
@@ -48,5 +52,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-/*# sourceMappingURL=new-tweet.css.map */

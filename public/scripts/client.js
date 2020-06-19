@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -41,7 +36,7 @@ const renderTweets = function (tweets) {
 const validation = () => {
   const tweetValue = $("#tweet-text").val();
   if (tweetValue === "" || tweetValue === null) {
-    $("#error-message").text("The input is empty")
+    $("#error-message").text("The input is empty, please enter some text!")
     $("#error").slideDown();
     return false;
   } else if (tweetValue.length > 140) {

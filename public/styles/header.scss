@@ -1,3 +1,5 @@
+$header-bg-color: #cc8800;
+
 .page-header {
   height: 400px;
   width: 100%;
@@ -6,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #cc8800;
+  background-color: $header-bg-color;
   background-image: url(http://www.transparenttextures.com/patterns/project-paper.png);
 }
 
@@ -20,5 +22,3 @@
     width: 50%;
   }
 }
-
-/*# sourceMappingURL=header.css.map */

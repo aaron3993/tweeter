@@ -1,0 +1,35 @@
+$nav-bg-color: #4056A1;
+$nav-font-color: #FFFFFF;
+$nav-font-stack: 'Bungee', cursive, sans-serif;
+$toggle-button-color: red;
+
+nav {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $nav-font-stack;
+  height: 120px;
+  width: 100vw;
+  background-color: $nav-bg-color;
+  color: $nav-font-color;
+  padding: 1.5em;
+}
+
+.toggle-form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p { margin: auto; }
+
+  i {
+    color: $toggle-button-color;
+
+    &:hover { font-size: 150%; }
+  }
+}
+
+

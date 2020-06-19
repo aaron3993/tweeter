@@ -4,7 +4,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: "Bungee", cursive, sans-serif;
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
@@ -13,20 +13,19 @@ nav {
 }
 
 .toggle-form {
-  margin-top: 40px;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .toggle-form p {
   margin: auto;
 }
-
-.toggle-button {
+.toggle-form i {
   color: red;
 }
-
-.toggle-button:hover {
+.toggle-form i:hover {
   font-size: 150%;
 }
+
+/*# sourceMappingURL=nav.css.map */
