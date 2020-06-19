@@ -1,4 +1,4 @@
-const toggleForm = () => {
+const toggleForm = function() {
   $(".toggle-button").click(function() {
     $(".form-hidden").slideToggle();
   });

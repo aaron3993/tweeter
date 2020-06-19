@@ -4,7 +4,7 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
-const createTweetElement = (tweet) => {
+const createTweetElement = function(tweet) {
   let $tweet = $(`
   <article class="tweet">
     <header>
@@ -37,7 +37,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-const validation = () => {
+const validation = function() {
   const tweetValue = $("#tweet-text").val();
   if (tweetValue === "" || tweetValue === null) {
     $("#error-message").text("The input is empty!");
@@ -51,7 +51,7 @@ const validation = () => {
   return true;
 };
 
-const loadTweets = () => {
+const loadTweets = function() {
   $.ajax({
     url: "/tweets",
     method: "GET",
@@ -62,7 +62,7 @@ const loadTweets = () => {
   });
 };
 
-const postTweets = () => {
+const postTweets = function() {
   $("#add-tweet").on("submit", function(event) {
     event.preventDefault();
     if (validation()) {
