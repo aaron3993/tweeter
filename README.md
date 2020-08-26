@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+This project is a single-page application that allows the user to add a tweet with a character limit. The tweet will be automatically rendered on the list of tweets on the page.
 
 ## Getting Started
 
